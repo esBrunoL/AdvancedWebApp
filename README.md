@@ -1,3 +1,5 @@
+This project was entirely created by giving commands to Copilot running within Visual Studio Code.  There is no actual original work here.
+
 # Authentication Demo Project
 
 This project demonstrates authentication tokens in a full-stack application using HTML, CSS, JavaScript, Java (Spring Boot), MongoDB, OAuth, and React.js.
