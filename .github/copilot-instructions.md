@@ -12,6 +12,3 @@ This project demonstrates authentication using HTML, CSS, JavaScript, Java (Spri
 - [ ] Ensure Documentation is Complete
 
 Refer to the main README.md for details.
-
-cd "server"
-mvn spring-boot:run

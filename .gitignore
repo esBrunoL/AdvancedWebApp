@@ -1,0 +1,28 @@
+# Node.js
+client/node_modules/
+client/build/
+client/.env
+
+# Java
+server/target/
+server/.classpath
+server/.project
+server/.settings/
+server/.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Misc
+.env
+
+.fake
