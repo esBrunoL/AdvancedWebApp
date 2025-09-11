@@ -12,7 +12,7 @@ form {
   max-width: 400px;
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+input[name="familyName"], input[name="givenName"], input[name="phone"], input[name="userid"], input[name="password"] {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
@@ -22,11 +22,23 @@ input[type="text"], input[type="email"], input[type="password"], input[type="tel
   background: #f0f4fa;
   transition: box-shadow 0.2s;
 }
+input[type="error"]{
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 12px;
+  border: 1px solid #cfd8dc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  background: rgb(234, 118, 118);
+  transition: box-shadow 0.2s;
+
+}
 
 input:focus {
   box-shadow: 0 2px 6px rgba(33,150,243,0.15);
   outline: none;
 }
+
 
 button {
   border: none;

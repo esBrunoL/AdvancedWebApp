@@ -31,8 +31,29 @@ function Register() {
   };
 
   const handleChange = e => {
+    const { name, value } = e.target;
+  setForm((prev) => ({ ...prev, [name]: value }));
+
+    // Reset style if corrected
+    if (value.trim() !== '') {
+      e.target.style.backgroundColor = '#f0f4fa';
+      e.target.style.borderColor = '#cfd8dc';
+    }
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+ 
+  const handleBlur = (e) => {
+  const { name, value } = e.target;
+  if (value.trim() === '') {
+    e.target.style.backgroundColor = '#ffe6e6'; // light red
+    e.target.style.borderColor = 'red';
+  } else {
+    e.target.style.backgroundColor = '#f0f4fa'; // original color
+    e.target.style.borderColor = '#cfd8dc';
+  }
+};
+
+
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -62,31 +83,31 @@ function Register() {
       <h2>Register</h2>
       {errors.form && <div style={{ color: 'red', marginBottom: '12px' }}>{errors.form}</div>}
       <div>
-        <label>Email:</label>
-  <input name="userid" type="email" value={form.userid} onChange={handleChange} placeholder="Enter your email" />
-        {errors.userid && <div style={{ color: 'red' }}>{errors.userid}</div>}
-      </div>
-      <div>
-        <label>Password:</label>
-  <input name="password" type="password" value={form.password} onChange={handleChange} placeholder="Enter your password" />
-        {errors.password && <div style={{ color: 'red' }}>{errors.password}</div>}
-      </div>
-      <div>
-        <label>Given Name(s):</label>
-  <input name="givenName" value={form.givenName} onChange={handleChange} placeholder="Enter your given name(s)" />
+        <label>First Name(s):</label>
+  <input name="givenName" type="text" autoFocus value={form.givenName} onChange={handleChange} onBlur={handleBlur} placeholder="Enter your given name(s)" />
         {errors.givenName && <div style={{ color: 'red' }}>{errors.givenName}</div>}
       </div>
       <div>
-        <label>Family Name(s):</label>
-  <input name="familyName" value={form.familyName} onChange={handleChange} placeholder="Enter your family name(s)" />
+        <label>Last Name:</label>
+  <input name="familyName" type="text"value={form.familyName} onChange={handleChange} onBlur={handleBlur} placeholder="Enter your family name(s)" />
         {errors.familyName && <div style={{ color: 'red' }}>{errors.familyName}</div>}
       </div>
       <div>
         <label>Phone:</label>
-  <input name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder="Enter your phone number" />
+  <input name="phone" type="tel" value={form.phone} onChange={handleChange} onBlur={handleBlur} placeholder="Enter your phone number" />
         {errors.phone && <div style={{ color: 'red' }}>{errors.phone}</div>}
       </div>
-      <button type="submit">Submit</button>
+      <div>
+        <label>Email:</label>
+  <input name="userid" type="email" value={form.userid} onChange={handleChange} onBlur={handleBlur} placeholder="Enter your email" />
+        {errors.userid && <div style={{ color: 'red' }}>{errors.userid}</div>}
+      </div>
+      <div>
+        <label>Password:</label>
+  <input name="password" type="password" value={form.password} onChange={handleChange} onBlur={handleBlur}  placeholder="Enter your password" />
+        {errors.password && <div style={{ color: 'red' }}>{errors.password}</div>}
+      </div>
+      <button type="submit">Register</button>
       <button type="button" onClick={() => window.location.href = '/'}>Cancel</button>
     </form>
   );
