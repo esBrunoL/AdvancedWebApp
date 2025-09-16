@@ -56,3 +56,28 @@ button {
 button:hover {
   background: #42a5f5;
 }
+
+ /*This division is for the radio buttons*/ 
+#bottom-div {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 60px;
+  width: 100%;
+  border-top: 3px solid white;
+  background-color: #90caf9;
+  z-index: 1000;
+  font-size: 20px;
+}
+
+#bottom-div label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}

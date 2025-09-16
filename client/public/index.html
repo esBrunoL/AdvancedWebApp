@@ -7,5 +7,59 @@
 </head>
 <body>
   <div id="root"></div>
+
+
+  <div id="bottom-div">
+  <label>
+    <input type="radio" name="counter" id="like">
+    Like
+  </label>
+  <span id="counter-display">0</span>
+  <label>
+    <input type="radio" name="counter" id="dislike">
+    Dislike
+  </label>
+</div>
+
+
+<script>// This script manages the like and dislike counter with localStorage.
+  let count = localStorage.getItem('counterValue') || 0;
+  count = parseInt(count, 10); // Ensure it's a number
+
+  const display = document.getElementById('counter-display');
+  const addRadio = document.getElementById('like');
+  const subtractRadio = document.getElementById('dislike');
+
+  // Show stored value on page load
+  display.textContent = count;
+
+  addRadio.addEventListener('change', () => {
+    if (addRadio.checked) {
+      count++;
+      updateDisplay();
+      disableRadios();
+    }
+  });
+
+  subtractRadio.addEventListener('change', () => {
+    if (subtractRadio.checked) {
+      count--;
+      updateDisplay();
+      disableRadios();
+    }
+  });
+
+  function updateDisplay() {
+    display.textContent = count;
+    localStorage.setItem('counterValue', count);
+  }
+
+  function disableRadios() {
+    addRadio.disabled = true;
+    subtractRadio.disabled = true;
+  }
+</script>
+
+
 </body>
 </html>

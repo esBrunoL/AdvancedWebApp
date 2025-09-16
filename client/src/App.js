@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '100px' }}>
-      <h1>Authentication Demo</h1>
+      <h1>Advanced Web Development - Bruno Lobo</h1>
       <button onClick={() => window.location.href = '/register'}>Register</button>
       <button onClick={() => window.location.href = '/login'}>Login</button>
       <button onClick={handleCancel}>Cancel</button>
