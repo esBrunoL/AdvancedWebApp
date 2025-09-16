@@ -1,4 +1,13 @@
-This project was entirely created by giving commands to Copilot running within Visual Studio Code.  There is no actual original work here.
+This project was entirely created by giving commands to Copilot running within Visual Studio Code.
+After the original project was created, I updated some features:
+
+Added color change for the regitration page;
+Added like/dislike counter and buttons;
+
+
+
+
+
 
 # Authentication Demo Project
 
