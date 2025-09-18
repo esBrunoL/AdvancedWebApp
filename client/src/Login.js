@@ -20,7 +20,7 @@ function Login() {
     if (data.token) {
       // Save token, redirect, etc.
       window.localStorage.setItem('authToken', data.token);
-      window.location.href = 'https://news.google.ca';
+      window.location.href = '/discussionBoard';
     } else {
       setError(data.message || 'Login failed. Please check your credentials and try again.');
     }

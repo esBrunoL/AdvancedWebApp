@@ -11,7 +11,7 @@ function App() {
       <h1>Advanced Web Development - Bruno Lobo</h1>
       <button onClick={() => window.location.href = '/register'}>Register</button>
       <button onClick={() => window.location.href = '/login'}>Login</button>
-      <button onClick={() => window.location.href = '/login'}>Cancel</button>
+      <button onClick={() => handleCancel()}>Cancel</button>
     </div>
   );
 }

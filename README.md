@@ -45,3 +45,20 @@ After AI generated the basic code, I modified .........
 
 ## Setup
 Instructions for running the project will be added as development progresses.
+
+
+1. Start the backend (Spring Boot server)
+Make sure you have Java and Maven installed.
+Start MongoDB locally (default port 27017).
+In the terminal, navigate to the server directory:
+       
+        cd server
+        mvn spring-boot:run
+
+2. Start the frontend (React client)
+Make sure you have Node.js and npm installed.
+In a new terminal, navigate to the client directory
+        
+        cd client
+        npm install
+        npm start
